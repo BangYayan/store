@@ -8,7 +8,7 @@ export const productSchema = z.object({
     slug: z.string().min(3, 'Slug must at least have 3 characters').max(255),
     category: z.string().min(3, 'Category must at least have 3 characters').max(255),
     brand: z.string().min(3, 'Brand must at least have 3 characters').max(255),
-    description: z.string().min(3, 'Description must at least have 3 characters').max(255),
+    description: z.string().nullable(),
     images: z.array(z.string()),
     stock: z.coerce.number(),
     isFeatured: z.boolean(),
