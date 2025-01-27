@@ -11,7 +11,7 @@ export const productSchema = z.object({
     description: z.string().min(3, 'Description must at least have 3 characters').max(255),
     images: z.array(z.string()),
     stock: z.coerce.number(),
-    isFeatued: z.boolean(),
+    isFeatured: z.boolean(),
     banner: z.string().nullable(),
     price: currency,
 })

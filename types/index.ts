@@ -2,7 +2,8 @@ import { z } from 'zod';
 import { productSchema } from '@/lib/validators';
 
 export type Product = z.infer<typeof productSchema> & {
-    id: number;
+    id: string;
     rating: string;
     createdAt: Date;
+    numReviews?: number; // Add if needed
 }
